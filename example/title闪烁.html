@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>这是title</title>
+</head>
+<body>
+	<script>
+		_record = 0;
+		var myTitle = document.title;
+		function titleBlink(){
+		  _record++;
+			if(_record%2 === 0){
+				document.title='【  】'+myTitle;
+			}
+			if(_record%2 === 1){
+				document.title='【新消息】'+myTitle;
+			}
+		  setTimeout("titleBlink()",500);//调节时间，单位毫秒。
+		}
+		titleBlink();
+	</script>
+</body>
+</html>
